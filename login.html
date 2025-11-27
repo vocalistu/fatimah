@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ind">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doremi Café — Welcome</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: src="images/background.jpeg" center/cover no-repeat fixed;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .card {
+      position: relative;
+      z-index: 2;
+      background: #fff;
+      width: 380px;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      animation: fadeIn 0.7s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);} 
+      to {opacity: 1; transform: translateY(0);} 
+    }
+
+    h1 {
+      font-weight: 600;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #ff6363;
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+      margin-top: 5px;
+    }
+
+    button:hover {
+      background: #ff4a4a;
+    }
+
+    .switch {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .switch span {
+      color: #ff6363;
+      cursor: pointer;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <div class="card" id="authCard">
+    <h1>Doremi Cake</h1>
+    <p id="formTitle">Selamat Datang! Silahkan masuk untuk melanjutkan.</p>
+
+    <div id="formContainer">
+      <!-- Login Form -->
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Kata Sandi" />
+      <button onclick="login()">Masuk</button>
+    </div>
+
+    <div class="switch">
+      <span onclick="toggleMode()">Membuat Akun Baru</span>
+    </div>
+  </div>
+
+  <script>
+    let mode = "login";
+
+    function toggleMode() {
+      const title = document.getElementById("formTitle");
+      const container = document.getElementById("formContainer");
+      const switcher = document.querySelector(".switch span");
+
+      if (mode === "login") {
+        mode = "signup";
+        title.textContent = "Buat Akunmu";
+        container.innerHTML = `
+          <input type="text" id="name" placeholder="Full Name" />
+          <input type="email" id="email" placeholder="Email" />
+          <input type="password" id="password" placeholder="Kata Sandi" />
+          <button onclick="signup()">Daftar</button>
+        `;
+        switcher.textContent = "Sudah memiliki akun? Masuk";
+      } else {
+        mode = "login";
+        title.textContent = "Selamat Datang! <br> Silahkan masuk untuk melanjutkan.";
+        container.innerHTML = `
+          <input type="email" id="email" placeholder="Email" />
+          <input type="password" id="password" placeholder="Kata Sandi" />
+          <button onclick="login()">Masuk</button>
+        `;
+        switcher.textContent = "Membuat Akun Baru";
+      }
+    }
+
+    function login() {
+      alert("Login successfully!"); window.location="home.html"
+    }
+
+    function signup() {
+      alert("Akun berhasil terbuat! Silahkan Login kembali."); window.location="index.html"
+    }
+  </script>
+</body>

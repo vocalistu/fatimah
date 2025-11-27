@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Doremi Cake — Welcome</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="landing">
+
+  <header class="topbar">
+    <div class="brand-left">
+      <img src="images/logo.png" alt="Doremi Cake" class="logo">
+      <div>
+        <div class="brand-name">Doremi Cake</div>
+        <div class="brand-slogan">Sweetness in Every Slice</div>
+      </div>
+    </div>
+    <nav class="top-actions">
+      <a href="login.html" class="btn small">Login</a>
+    </nav>
+  </header>
+
+  <main class="hero-landing">
+    <div class="hero-left">
+      <h1>Welcome to Doremi Cake</h1>
+      <p>Freshly baked cakes, cookies, brownies and pastries — made with love.</p><br>
+      <div class="hero-cta">
+        <a class="btn big" href="login.html">Join & Order</a>
+        <a href="home.html" class="btn big">Browse as Guest</a>
+      </div>
+      <div class="running"><marquee>Promo: Free fork for orders above IDR 100.000 • New: Hazelnut Brownie • Order via e-wallet or WhatsApp</marquee></div>
+    </div>
+
+    <div class="hero-gallery" aria-hidden="false" id="heroGallery">
+      <img src="images/satu.jpeg" alt="slide" class="slide">
+      <img src="images/dua.jpeg" alt="slide" class="slide">
+      <img src="images/tiga.jpeg" alt="product" class="slide">
+    </div>
+  </main>
+
+  <!-- LOGIN Modal -->
+  <div id="modalLogin" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label>Email<input id="loginEmail" type="email" required /></label>
+        <label>Password<input id="loginPass" type="password" required /></label>
+        <div class="modal-actions">
+          <button type="submit" class="btn">Masuk</button>
+          <button type="button" class="btn outline" onclick="closeLogin()">Batal</button>
+        </div>
+        <p class="muted">Admin demo: <code>admin@doremicake.com</code> / <code>Admin123</code></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- SIGNUP Modal -->
+  <div id="modalSignup" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <h2>Sign Up</h2>
+      <form id="signupForm">
+        <label>Nama<input id="signupName" required /></label>
+        <label>Email<input id="signupEmail" type="email" required /></label>
+        <label>Password<input id="signupPass" type="password" required /></label>
+        <div class="modal-actions">
+          <button type="submit" class="btn">Daftar</button>
+          <button type="button" class="btn outline" onclick="closeSignup()">Batal</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer-landing"> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    © <span id="yearIndex"></span> Doremi Cake — Sweetness in Every Slice
+  </footer>
+
+<script src="script.js" defer></script>
+<script>document.getElementById('yearIndex').innerText = new Date().getFullYear();</script>
+</body>
+</html>

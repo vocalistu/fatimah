@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Admin — Doremi Cake</title><link rel="stylesheet" href="style.css" /></head>
+<body class="site">
+<header class="simplebar"><button onclick="location.href='index.html'" class="btn">← Landing</button><h2>Admin Panel</h2><div></div></header>
+
+<main class="page">
+  <div id="adminLoginBlock">
+    <h3>Login Admin</h3>
+    <label>Email<input id="adminEmail" /></label> <br>
+    <label>Password<input id="adminPass" type="password" /></label> <br>
+    <div><button class="btn" onclick="adminLoginAction()">Login</button></div>
+    <p class="muted">Contoh akun: admin@doremicake.com / Admin123</p>
+  </div>
+
+  <div id="adminPanel" style="display:none">
+    <h3>Tambah Produk</h3>
+    <label>Nama<input id="pName" /></label> <br>
+    <label>Kategori<select id="pCat"><option value="kue">Kue</option><option value="cookies">Cookies</option><option value="brownies">Brownies</option><option value="pastry">Pastry</option></select></label> <br>
+    <label>Harga<input id="pPrice" type="number" /></label> <br>
+    <label>Image (path e.g. images/cake1.jpg)<input id="pImg" /></label> <br>
+    <label>Deskripsi<textarea id="pDesc"></textarea></label> <br>
+    <div><button class="btn" onclick="adminAddProduct()">Tambah</button></div> <br>
+
+    <h3>Produk Saat Ini</h3>
+    <div id="adminProductsList"></div>
+
+    <div style="margin-top:16px"><button class="btn outline" onclick="adminLogout()">Logout Admin</button></div>
+  </div>
+</main>
+
+<script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Profil — Doremi Cake</title><link rel="stylesheet" href="style.css" /></head>
+<body class="site">
+  <header class="simplebar"><button onclick="location.href='home.html'">← Kembali</button><h2>Profil</h2><div></div></header>
+
+  <main class="page">
+    <div class="profile-card">
+      <img src="images/logo.png" alt="avatar" class="avatar">
+      <h3 id="profileName">Nama</h3>
+      <p id="profileEmail">email@example.com</p>
+      <div class="profile-info">
+        <p>WhatsApp: <span id="profilePhone">-</span></p>
+        <p>Alamat: <span id="profileAddr">-</span></p>
+      </div>
+      <div class="profile-actions">
+        <button class="btn" id="editProfileBtn">Edit Profil</button>
+        <button class="btn outline" id="logoutBtn">Logout</button>
+      </div>
+    </div>
+
+    <section>
+      <h3>Riwayat Pesanan</h3>
+      <ul id="orderHistory" class="order-history"></ul>
+    </section>
+  </main>
+
+<script src="script.js" defer></script>
+</body>
+</html>

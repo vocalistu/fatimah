@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Checkout — Doremi Cake</title><link rel="stylesheet" href="style.css" /></head>
+<body class="site">
+  <header class="simplebar"><button onclick="location.href='cart.html'">← Kembali</button><h2>Checkout</h2><div></div></header>
+
+  <main class="page">
+    <form id="checkoutForm">
+      <label>Nama Lengkap <input name="fullname" required></label><br> <br>
+      <label>WhatsApp (contoh: 62812...) <input name="whatsapp" required></label><br> <br>
+      <label>Alamat <textarea name="address" rows="2" required></textarea></label><br> <br>
+      <label>Jadwal Pengantaran <input type="datetime-local" name="delivery" required></label><br> <br>
+      <label>Permintaan Tambahan <input name="additional" /></label><br> <br>
+
+      <div class="checkout-actions">
+        <button type="button" class="btn" onclick="payEwallet()">Bayar via E-wallet</button>
+        <button type="submit" class="btn primary">Pesan via WhatsApp</button>
+      </div>
+    </form>
+  </main>
+
+<script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Keranjang — Doremi Cake</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="site">
+
+  <header class="simplebar">
+    <button onclick="location.href='home.html'" class="btn">← Kembali</button>
+    <h2>Keranjang Saya</h2>
+    <div></div>
+  </header>
+
+  <main class="page">
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-summary">
+      <div>Total: <strong id="cartTotal">IDR 0</strong></div>
+      <div class="cart-actions">
+        <button class="btn" onclick="location.href='home.html'">Lanjut Belanja</button>
+        <button class="btn primary" onclick="location.href='checkout.html'">Checkout</button>
+      </div>
+    </div>
+  </main>
+
+<script src="script.js" defer></script>
+</body>
+</html>
