@@ -13,7 +13,7 @@ const SHOP_WA = '6281234567890'; // ganti sesuai toko
 /* Default products */
 const DEFAULT_PRODUCTS = [
   {id:1, name:'Velvet Rose Cake', category:'kue', price:125000, desc:'Red velvet with cream cheese', img: 'images/cake1.jpeg', popular:95},
-  {id:2, name:'Choco Chip Cookies', category:'cookies', price:35000, desc:'Crunchy outside, chewy inside', img:'images/cookies.jpeg', popular:80},
+  {id:2, name:'Choco Chip Cookies', category:'cookies', price:35000, desc:'Crunchy outside, chewy inside', img:'images/cookies1.jpeg', popular:80},
   {id:3, name:'Hazelnut Brownie', category:'brownies', price:45000, desc:'Rich chocolate with hazelnut', img:"images/brownies1.jpeg", popular:88},
   {id:4, name:'Butter Croissant', category:'pastry', price:28000, desc:'Flaky buttery layers', img:'images/pastry1.jpeg', popular:70},
 ];
